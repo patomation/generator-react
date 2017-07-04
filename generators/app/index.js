@@ -17,12 +17,11 @@ module.exports = class extends Generator {
   method2() {
     this.log('method two just ran');
   }
-  
+
   writing() {
     this.fs.copyTpl(
-      this.templatePath('index.html'),
-      this.destinationPath('public/index.html'),
-      { title: 'Templating with Yeoman' }
+      this.templatePath(),
+      this.destinationPath()
     );
   }
 
