@@ -44,9 +44,9 @@ print 'Webpack Finished running'
 
 # Copy index app.js and all images from dist folder
 from distutils.dir_util import copy_tree
-copy_tree('./dist', '/x/patomation.github.io/projects/'+branchName)
+copy_tree('./dist', '/x/patomation.github.io/demos/'+branchName)
 # Copy thumbnail
-copyanything('./thumbnail.png', '/x/patomation.github.io/projects/'+branchName+'/thumbnail.png')
+copyanything('./thumbnail.png', '/x/patomation.github.io/demos/'+branchName+'/thumbnail.png')
 
 
 #Commit
