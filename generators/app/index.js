@@ -25,4 +25,11 @@ module.exports = class extends Generator {
     );
   }
 
+  // Copy all dotfiles
+  copyDotFiles() {
+    this.fs.copy(
+      this.templatePath('.*'),
+      this.destinationRoot()
+    );
+  }
 };
