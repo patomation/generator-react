@@ -25,6 +25,7 @@
     "enhanced-resolve": "^3.1.0",
     "file-loader": "^0.11.2",
     "graceful-fs": "^4.1.11",
+    "html-webpack-plugin": "^2.29.0",
     "jquery": "^3.2.1",
     "memory-fs": "^0.4.1",
     "minimatch": "^3.0.4",
