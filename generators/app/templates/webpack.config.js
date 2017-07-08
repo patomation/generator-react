@@ -1,3 +1,5 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 var svgoConfig = JSON.stringify({
   plugins: [
     {removeTitle: true},
@@ -7,18 +9,16 @@ var svgoConfig = JSON.stringify({
 });
 
 module.exports = {
-  context: __dirname + "/app",
-  entry: {
-    javascript: "./app.js",
-    html: "./index.html"
-  },
-
-
+  entry: "./src/entry.js",
   output: {
-    filename: "app.js",
-    path: __dirname + "/dist"
+    path: __dirname + "/build",
+    filename: "bundle.js"
   },
-
+  plugins: [new HtmlWebpackPlugin({
+    title: 'My App',
+    template: 'src/index.ejs',
+    favicon: 'favicon.ico'
+  })], //Generates index.html file in dist with script pointing to bundle.js
 
   module: {
     loaders: [
