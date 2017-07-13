@@ -1,7 +1,6 @@
 //Modules
 import React from "react"
 import $ from 'jquery'
-import Utilities from '../../utilities'
 
 //Components
 import Spinner from './spinner'
@@ -65,7 +64,7 @@ export default React.createClass({
     return (
       <div
         className="loader-animation"
-        style={Utilities.merge(this.styles.container, this.props.style)}>
+        style={this.styles.container}>
         <Spinner style={this.styles.spinner}/>
 
         <div className='topDoor' style={this.styles.topDoor}></div>
